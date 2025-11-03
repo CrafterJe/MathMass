@@ -5,19 +5,18 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 declare const self: any;
 
-const BASE = '/math-mass/'
 // https://vite.dev/config/
 export default defineConfig({
-  base: BASE,
+  base: '/',
   plugins: [vue(), tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-  includeAssets: ['icons/icon-192.png', 'icons/icon-512.png'],
+      includeAssets: ['icons/icon-192.png', 'icons/icon-512.png'],
       manifest: {
         name: 'Math Mass',
         short_name: 'MathMass',
-        start_url: BASE,
-        scope: BASE,
+        start_url: '/',
+        scope: '/',
         display: 'standalone',
         background_color: '#ffffff',
         theme_color: '#0ea5e9',
